@@ -1,5 +1,19 @@
-.orientationOfBooks{
-    display: inline;
-   
-    
+h1{
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+.orientationOfBooks{
+
+    display: inline-flex;
+    padding: 50px;
+    justify-content: center;
+    margin-left: 55px;
+}
+.mesto{
+    text-align: center;
+}
+.grow:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.1);
+  }

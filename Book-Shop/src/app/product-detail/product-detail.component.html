@@ -1,14 +1,17 @@
-<div *ngIf = "product">
+<div *ngIf = "product" class= 'cent'>
     <div>
         <img src = {{product.image}}>
         <a href = {{product.url}}>
-            <h3>
+            <h3 style ="margin-top: 50px;">
                 {{ product.name }}
             </h3>
         </a>
-        <h4>{{product.description}}</h4>
-        <h3>ID: {{product.id}}</h3>
-
-        <button>Share</button>
+        <h4 style = "margin-top: 50px;">{{product.description}}</h4>
+        <div style = "margin-top: 25px;">
+        <label>
+            name:
+            <input  [(ngModel)] = "product.name" placeholder = "product name">
+        </label>
+        </div>
     </div>
 </div>

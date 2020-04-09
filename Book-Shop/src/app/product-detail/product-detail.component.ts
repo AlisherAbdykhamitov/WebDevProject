@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Product} from '../data/products';
 import {ProductDetailsService} from '../services/product-details.service';
 import {ActivatedRoute} from '@angular/router';
+import {HttpClient, HttpHeaders} from '@angular/common/http'
 
 @Component({
   selector: 'app-product-detail',
@@ -11,7 +12,11 @@ import {ActivatedRoute} from '@angular/router';
 export class ProductDetailComponent implements OnInit {
 
   product: Product;
-  constructor(private productDetailsService: ProductDetailsService, private route: ActivatedRoute) { }
+  constructor(
+    private productDetailsService: ProductDetailsService, 
+    private route: ActivatedRoute,
+    private http: HttpClient
+    ){ }
 
   ngOnInit(): void {
     this.getDetailsOfProduct();
