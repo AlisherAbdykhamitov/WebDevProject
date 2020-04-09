@@ -1,0 +1,15 @@
+<div *ngFor = "let product of product" class = "orientationOfBooks">
+  <div>
+    <h1>
+      <a routerLink="/categories/:id/produсts/{{product.id}}/product-detail" style = "text-decoration: none;color: black;">
+            {{product.name}}
+      </a>
+    </h1>
+  </div>
+  <div>
+        <img src = {{product.image}}>
+        <a href = {{product.url}}></a>
+  </div>
+      
+    
+  </div>

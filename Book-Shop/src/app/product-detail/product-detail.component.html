@@ -1,0 +1,14 @@
+<div *ngIf = "product">
+    <div>
+        <img src = {{product.image}}>
+        <a href = {{product.url}}>
+            <h3>
+                {{ product.name }}
+            </h3>
+        </a>
+        <h4>{{product.description}}</h4>
+        <h3>ID: {{product.id}}</h3>
+
+        <button>Share</button>
+    </div>
+</div>
