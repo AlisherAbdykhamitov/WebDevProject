@@ -1,0 +1,59 @@
+button {
+  cursor: pointer;
+  min-width: 200px;
+  padding: 15px 5px;
+  text-transform: uppercase;
+  vertical-align: middle;
+  background: #3da35a;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgb(56,100,38);
+  transition: all 1s;
+}
+button:hover {
+  box-shadow: 0 0 55px rgb(56,100,38);
+}
+
+button:focus {
+  outline: none;
+}
+.cat{
+  display: inline-flex;
+}
+/* Style the navigation bar */
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  text-align: center;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #000;
+}
+
+/* Current/active navbar link */
+.active {
+  background-color: #4CAF50;
+}
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+
