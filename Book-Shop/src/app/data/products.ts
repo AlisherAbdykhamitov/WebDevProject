@@ -1,7 +1,4 @@
-// @ts-ignore
-// @ts-ignore
-// @ts-ignore
-// @ts-ignore
+
 export const PRODUCTS = [
   {
     categoryId: 1,

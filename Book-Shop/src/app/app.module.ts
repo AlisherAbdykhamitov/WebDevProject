@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
 import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api'
 import {FormsModule} from '@angular/forms'
 
@@ -12,6 +11,9 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import {InMemoryDataService} from './services/';
 import { MessagesComponent } from './messages/messages/messages.component';
+import { AuthInterceptor } from "../auth.interceptor";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+
 
 @NgModule({
   declarations: [
@@ -19,16 +21,22 @@ import { MessagesComponent } from './messages/messages/messages.component';
     MainComponent,
     ProductListComponent,
     ProductDetailComponent,
-    MessagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false})
+    FormsModule,
+   
+    // HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {dataEncapsulation: false})
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

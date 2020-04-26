@@ -54,9 +54,10 @@
    </p>
 
 <div class="g">
-    <h1 *ngFor="let categories of categories" class = "cat">
-        <Button routerLink = "/categories/{{categories.id}}/products">{{categories.name}}</Button>
-    </h1>
+    <div *ngFor="let category of categories">
+        <a [routerLink]="'/categories/' + category.id">{{ category.name }}</a>
+
+      </div>
 </div>
     
 
